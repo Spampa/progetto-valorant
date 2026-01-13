@@ -47,62 +47,6 @@ conda activate valorant-progetto_statistica
 ```
 
 Dovresti vedere `(valorant-progetto_statistica)` apparire all'inizio della tua riga di comando.
-
------
-
-## 💻 Utilizzo
-
-### Esecuzione dello script
-
-Per avviare l'analisi dei dati, assicurati di essere nella cartella del progetto e che l'ambiente sia attivo, quindi esegui:
-
-```bash
-python main.py
-```
-
-### Cosa fa lo script?
-
-1.  Legge il dataset `merge_data_valorant.csv`.
-2.  Carica i dati in un DataFrame Pandas ottimizzato.
-3.  Mostra un'anteprima delle prime righe e statistiche di base nel terminale.
-
------
-
-## 📂 Struttura del Progetto
-
-```text
-Valorant-progetto-statistica/
-├── main.py                   # Script principale di analisi (Entry point)
-├── environment.yml           # File di configurazione delle dipendenze Conda
-├── README.md                 # Documentazione del progetto
-└── data/
-    └── merge_data_valorant.csv   # Dataset Raw (Statistiche partite)
-```
-
------
-
-## 🛠️ Manutenzione e Sviluppo
-
-**Aggiungere nuove librerie**
-Se installi nuovi pacchetti durante lo sviluppo, ricorda di aggiornare il file `environment.yml` per chi userà il progetto dopo di te:
-
-```bash
-conda env export --no-builds > environment.yml
-```
-
-**Risoluzione problemi**
-Se riscontri errori strani con le librerie, prova a ricreare l'ambiente da zero:
-
-```bash
-conda deactivate
-conda env remove -n valorant-progetto_statistica
-conda env create -f environment.yml
-```
-
------
-
-## 📝 Note
-
   * Assicurati che il file `data/merge_data_valorant.csv` sia presente prima di eseguire lo script.
   * Il progetto è ottimizzato per **Python 3.9**.
 
